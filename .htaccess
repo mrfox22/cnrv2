@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    # Open Rerite
+    RewriteEngine On
+
+    # Access directly if the requested file or folder exists
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Redirect to index.php if if the requested file or folder does not exist
+    RewriteRule . index.php
+</IfModule>

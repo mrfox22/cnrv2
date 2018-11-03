@@ -9,5 +9,15 @@
     "squizlabs/php_codesniffer": "3.*"
   },
 	"minimum-stability": "dev",
-	"prefer-stable": true
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+		},
+		"classmap": [
+		],
+		"files": [
+			"utility/config.php",
+			"functions/func_all.php"
+		]
+	}
 }
