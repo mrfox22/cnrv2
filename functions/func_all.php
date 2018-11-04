@@ -2,7 +2,7 @@
 function prePrintR($print, $die = false)
 {
 	echo '<pre>';
-	print_r($print);
+	var_dump($print);
 	echo '</pre><hr>';
 
 	if ($die) die();
