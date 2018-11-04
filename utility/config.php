@@ -11,11 +11,19 @@ if (!defined('SERVER_URL')) define('SERVER_URL', $_SERVER['HTTP_HOST']);
 if (!defined('SERVER_PATH')) define('SERVER_PATH', realpath($_SERVER['DOCUMENT_ROOT']));
 
 
-if (!defined('PATTERN')) define('PATTERN', '/^\w+\.loc$/');
 if (!defined('PRODUCTION_MODE')) {
-  if (preg_match(PATTERN, SERVER_URL)) {
+  if (preg_match('/^\w+\.loc$/', SERVER_URL)) {
     define('PRODUCTION_MODE', false);
   } else {
     define('PRODUCTION_MODE', true);
   }
+}
+
+if (PRODUCTION_MODE) {
+  if (!defined('PROJECT_FOLDER')) define('PROJECT_FOLDER', 'cnrv2');
+  if (!defined('BASE_URL')) define('BASE_URL', SERVER_URL.'/'.PROJECT_FOLDER);
+  if (!defined('BASE_PATH')) define('BASE_PATH', SERVER_PATH.DS.PROJECT_FOLDER);
+} else {
+  if (!defined('BASE_URL')) define('BASE_URL', SERVER_URL);
+  if (!defined('BASE_PATH')) define('BASE_PATH', SERVER_PATH);
 }

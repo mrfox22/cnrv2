@@ -7,8 +7,8 @@ prePrintR(SERVER_PATH);
 
 prePrintR(SERVER_URL);
 
-prePrintR(PATTERN);
-
 prePrintR(PRODUCTION_MODE);
 
-prePrintR(array("25", 26, 27, 28));
+prePrintR(BASE_PATH);
+
+prePrintR(BASE_URL);
