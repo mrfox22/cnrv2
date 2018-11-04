@@ -19,6 +19,11 @@ if (!defined('PRODUCTION_MODE')) {
   }
 }
 
+if(!defined('DB_HOST'))                 define('DB_HOST', 'localhost');
+if(!defined('DB_NAME'))                 define('DB_NAME', 'cnrv2_db');
+if(!defined('DB_USER'))                 define('DB_USER', 'root');
+if(!defined('DB_PASSWORD'))             define('DB_PASSWORD', '');
+
 if (PRODUCTION_MODE) {
   if (!defined('PROJECT_FOLDER')) define('PROJECT_FOLDER', 'cnrv2');
   if (!defined('BASE_URL')) define('BASE_URL', SERVER_URL.'/'.PROJECT_FOLDER);
@@ -27,3 +32,5 @@ if (PRODUCTION_MODE) {
   if (!defined('BASE_URL')) define('BASE_URL', SERVER_URL);
   if (!defined('BASE_PATH')) define('BASE_PATH', SERVER_PATH);
 }
+
+
