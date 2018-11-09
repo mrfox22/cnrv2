@@ -1,4 +1,7 @@
 <?php
+
+use PHPRouter\RouteCollection;
+use PHPRouter\Route;
 require __DIR__ . '/vendor/autoload.php';
 
 prePrintR(DS);
@@ -12,3 +15,12 @@ prePrintR(PRODUCTION_MODE);
 prePrintR(BASE_PATH);
 
 prePrintR(BASE_URL);
+
+$collection = new RouteCollection();
+
+$collection->attachRoute(
+    new Route(
+        '/',
+        array()
+    )
+);

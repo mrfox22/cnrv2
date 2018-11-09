@@ -1,20 +1,21 @@
 {
-  "name": "Jerryfishzz/CNR",
+	"name": "Jerryfishzz/CNR",
 	"version": "2.0.0",
 	"description": "Booking and issue system for Music Center, China National Radio",
 	"require": {
-		"dannyvankooten/php-router":"dev-master"
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "3.*"
-  },
+		"dannyvankooten/php-router": "dev-master"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "3.*"
+	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
+			"core\\db\\": "core/db/",
+			"core\\base\\": "core/base/"
 		},
-		"classmap": [
-		],
+		"classmap": [],
 		"files": [
 			"utility/config.php",
 			"functions/func_all.php"
