@@ -17,12 +17,12 @@ class View
     public function __construct($template) 
     {
         try {
-            $file =  APP_ROOT . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . $template . '.phtml';
+            $file =  BASE_PATH . DS . 'app' . DS . 'views' . DS . 'items' . DS . $template . '.php';
 
             if (file_exists($file)) {
                 $this->template = $file;
             } else {
-//                throw new customException('Template ' . $template . ' not found!');
+                throw new customException('Template ' . $template . ' not found!');
             }
         }
         catch (customException $e) {

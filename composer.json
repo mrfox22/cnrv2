@@ -13,7 +13,8 @@
 	"autoload": {
 		"psr-4": {
 			"core\\db\\": "core/db/",
-			"core\\base\\": "core/base/"
+			"core\\base\\": "core/base/",
+			"app\\controllers\\": "app/controllers/"
 		},
 		"classmap": [],
 		"files": [
