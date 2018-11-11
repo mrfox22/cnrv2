@@ -14,18 +14,17 @@ class View
      */
     protected $data = array();
 
-    public function __construct($template) 
+    public function __construct($template)
     {
         try {
-            $file =  BASE_PATH . DS . 'app' . DS . 'views' . DS . 'items' . DS . $template . '.php';
+            $file = BASE_PATH . DS . 'app' . DS . 'views' . DS . 'items' . DS . $template . '.php';
 
             if (file_exists($file)) {
                 $this->template = $file;
             } else {
                 throw new customException('Template ' . $template . ' not found!');
             }
-        }
-        catch (customException $e) {
+        } catch (customException $e) {
             echo $e->errorMessage();
         }
     }
@@ -38,7 +37,8 @@ class View
      *
      * @return $this View
      */
-    public function addData($key, $val) {
+    public function addData($key, $val)
+    {
         $this->data[$key] = $val;
         return $this;
     }
@@ -48,11 +48,12 @@ class View
      *
      * @return string The rendered template.
      */
-    public function render() {
+    public function render()
+    {
         extract($this->data);
 
         ob_start();
-        include($this->template);
+        include $this->template;
         $content = ob_get_contents();
         ob_end_clean();
         return $content;

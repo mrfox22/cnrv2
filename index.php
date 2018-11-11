@@ -28,14 +28,14 @@ if ($route) {
     return true;
 }
 
-prePrintR(DS);
+// prePrintR(DS);
 
-prePrintR(SERVER_PATH);
+// prePrintR(SERVER_PATH);
 
-prePrintR(SERVER_URL);
+// prePrintR(SERVER_URL);
 
-prePrintR(PRODUCTION_MODE);
+// prePrintR(PRODUCTION_MODE);
 
-prePrintR(BASE_PATH);
+// prePrintR(BASE_PATH);
 
-prePrintR(BASE_URL);
+// prePrintR(BASE_URL);

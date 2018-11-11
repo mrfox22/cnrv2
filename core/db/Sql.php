@@ -49,7 +49,7 @@ class Sql
      */
     public function order($order = array())
     {
-        if($order) {
+        if ($order) {
             $this->filter .= ' ORDER BY ';
             $this->filter .= implode(',', $order);
         }
